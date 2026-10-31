@@ -1,0 +1,480 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Marwan Abdulgawad | Project Manager, Arts, Culture & Events</title>
+<meta name="description" content="Project manager with nine years of experience across arts and culture, SaaS, and startup ecosystems. Exhibitions at the Red Sea Museum, artist residencies, incubators, and client onboarding.">
+<meta property="og:title" content="Marwan Abdulgawad | Project Manager">
+<meta property="og:description" content="Exhibitions, residencies, programs and client delivery across KSA and Egypt.">
+<meta property="og:image" content="assets/og.jpg">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23143a3f'/%3E%3Ctext x='32' y='42' font-family='Georgia,serif' font-size='28' fill='%23f3ece0' text-anchor='middle'%3EMA%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#f5f0e7; --surface:#fbf8f2; --ink:#1b2224; --muted:#5c6668; --line:#ddd4c5;
+  --accent:#143a3f; --accent-2:#b5532f; --chip:#ece4d6;
+  --serif:"Fraunces",Georgia,serif; --sans:"Manrope",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --max:1120px;
+}
+@media (prefers-color-scheme:dark){
+  :root{--bg:#121718; --surface:#192022; --ink:#ece6da; --muted:#9aa5a6; --line:#2b3537;
+        --accent:#7fb7b4; --accent-2:#e08a64; --chip:#222b2d;}
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+img{max-width:100%;display:block}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 24px}
+
+/* nav */
+nav{position:sticky;top:0;z-index:10;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:64px;gap:16px}
+.brand{font-family:var(--serif);font-size:20px;font-weight:500;text-decoration:none;letter-spacing:-.01em}
+.navlinks{display:flex;gap:26px;list-style:none;font-size:14px;font-weight:600}
+.navlinks a{text-decoration:none;color:var(--muted)}
+.navlinks a:hover{color:var(--ink)}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:11px 20px;border-radius:999px;font-size:14px;font-weight:700;text-decoration:none;border:1.5px solid var(--accent);transition:.2s}
+.btn.solid{background:var(--accent);color:var(--bg)}
+.btn.solid:hover{opacity:.88}
+.btn.ghost{color:var(--accent)}
+.btn.ghost:hover{background:var(--accent);color:var(--bg)}
+@media (max-width:820px){.navlinks{display:none}}
+
+/* hero */
+.hero{padding:88px 0 72px}
+.hero .wrap{display:grid;grid-template-columns:1.35fr .9fr;gap:64px;align-items:center}
+.eyebrow{font-size:13px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--accent-2);margin-bottom:22px}
+h1{font-family:var(--serif);font-weight:500;font-size:clamp(42px,6vw,72px);line-height:1.04;letter-spacing:-.025em;margin-bottom:26px}
+h1 em{font-style:italic;color:var(--accent)}
+.lede{font-size:19px;color:var(--muted);max-width:560px;margin-bottom:34px}
+.cta{display:flex;gap:12px;flex-wrap:wrap}
+.portrait{position:relative}
+.portrait img{border-radius:6px;aspect-ratio:4/5;object-fit:cover;width:100%;filter:saturate(.9)}
+.portrait::before{content:"";position:absolute;inset:18px -18px -18px 18px;border:1.5px solid var(--accent-2);border-radius:6px;z-index:-1}
+.loc{margin-top:28px;font-size:14px;color:var(--muted);display:flex;align-items:center;gap:8px}
+.loc span.dot{width:8px;height:8px;border-radius:50%;background:#3a9a6a;display:inline-block}
+@media (max-width:820px){.hero{padding:48px 0}.hero .wrap{grid-template-columns:1fr;gap:48px}.portrait{max-width:340px}}
+
+/* stats */
+.stats{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--surface)}
+.stats .wrap{display:grid;grid-template-columns:repeat(5,1fr)}
+.stat{padding:30px 20px;border-left:1px solid var(--line)}
+.stat:first-child{border-left:none;padding-left:0}
+.stat b{display:block;white-space:nowrap;font-family:var(--serif);font-weight:500;font-size:34px;line-height:1.1;color:var(--accent);letter-spacing:-.02em}
+.stat small{display:block;font-size:13px;color:var(--muted);margin-top:6px;line-height:1.4}
+@media (max-width:820px){.stat b{font-size:28px}.stats .wrap{grid-template-columns:1fr 1fr}.stat{border-left:none;padding:22px 0;border-bottom:1px solid var(--line)}.stat:nth-child(even){padding-left:20px;border-left:1px solid var(--line)}.stat:last-child{border-bottom:none}}
+
+/* sections */
+section{padding:96px 0}
+.sec-head{display:grid;grid-template-columns:260px 1fr;gap:48px;margin-bottom:48px;align-items:baseline}
+.sec-head .num{font-size:13px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--accent-2)}
+h2{font-family:var(--serif);font-weight:500;font-size:clamp(32px,4vw,46px);line-height:1.1;letter-spacing:-.02em}
+.body-grid{display:grid;grid-template-columns:260px 1fr;gap:48px}
+@media (max-width:820px){section{padding:64px 0}.sec-head,.body-grid{grid-template-columns:1fr;gap:12px}}
+
+.about p{font-size:19px;margin-bottom:20px;max-width:720px}
+.about p.quote{font-family:var(--serif);font-size:26px;line-height:1.35;font-style:italic;color:var(--accent);border-left:3px solid var(--accent-2);padding-left:22px;margin-bottom:30px}
+
+/* work */
+.work{background:var(--surface);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.feature{display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid var(--line);border-radius:8px;overflow:hidden;margin-bottom:28px;background:var(--bg)}
+.feature .art{background:var(--accent);color:var(--bg);padding:44px;display:flex;flex-direction:column;justify-content:space-between;min-height:340px;position:relative;overflow:hidden}
+.feature .art.alt{background:var(--accent-2)}
+.feature .art svg{position:absolute;right:-40px;bottom:-40px;width:280px;opacity:.16}
+.feature .art .tag{font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;opacity:.85}
+.feature .art h3{font-family:var(--serif);font-weight:500;font-size:34px;line-height:1.1;letter-spacing:-.015em;position:relative}
+.feature .art .where{font-size:15px;opacity:.85;margin-top:10px;position:relative}
+.feature .txt{padding:40px 44px}
+.feature .txt p{margin-bottom:18px;color:var(--ink)}
+.facts{display:flex;flex-wrap:wrap;gap:8px;margin:6px 0 4px}
+.facts span{background:var(--chip);font-size:13px;font-weight:600;padding:6px 12px;border-radius:999px}
+.role{font-size:15px;color:var(--muted);border-top:1px solid var(--line);padding-top:16px;margin-top:20px}
+.role b{color:var(--ink)}
+@media (max-width:820px){.feature{grid-template-columns:1fr}.feature .art{min-height:220px;padding:32px}.feature .txt{padding:28px}}
+
+.mini{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.card{border:1px solid var(--line);border-radius:8px;padding:28px;background:var(--bg);display:flex;flex-direction:column}
+.card .tag{font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--accent-2);margin-bottom:12px}
+.card h3{font-family:var(--serif);font-weight:500;font-size:23px;line-height:1.2;margin-bottom:12px}
+.card p{font-size:15px;color:var(--muted);flex:1}
+.card a.more{margin-top:18px;font-size:14px;font-weight:700;color:var(--accent);text-decoration:none}
+.card a.more:hover{text-decoration:underline}
+@media (max-width:900px){.mini{grid-template-columns:1fr}}
+
+/* services */
+.svc{display:grid;grid-template-columns:repeat(2,1fr);gap:0;border-top:1px solid var(--line)}
+.svc details{border-bottom:1px solid var(--line);padding:24px 0}
+.svc details:nth-child(odd){padding-right:32px;border-right:1px solid var(--line)}
+.svc details:nth-child(even){padding-left:32px}
+.svc summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:16px}
+.svc summary::-webkit-details-marker{display:none}
+.svc summary h3{font-family:var(--serif);font-weight:500;font-size:22px}
+.svc summary::after{content:"+";font-size:24px;color:var(--accent-2);transition:.2s;flex-shrink:0}
+.svc details[open] summary::after{transform:rotate(45deg)}
+.svc ul{margin:16px 0 0 18px;font-size:15px;color:var(--muted)}
+.svc li{margin-bottom:6px}
+.svc .for{font-size:13px;margin-top:12px;color:var(--muted)}
+.svc .for b{color:var(--ink);font-weight:600}
+@media (max-width:820px){.svc{grid-template-columns:1fr}.svc details:nth-child(odd),.svc details:nth-child(even){padding:22px 0;border-right:none}}
+
+/* experience */
+.exp{border-top:1px solid var(--line)}
+.job{display:grid;grid-template-columns:260px 1fr;gap:48px;padding:34px 0;border-bottom:1px solid var(--line)}
+.job .when{font-size:14px;font-weight:600;color:var(--muted)}
+.job .when .co{display:block;font-family:var(--serif);font-size:22px;font-weight:500;color:var(--ink);margin-bottom:4px}
+.job h3{font-size:18px;font-weight:700;margin-bottom:12px}
+.job ul{margin-left:18px;color:var(--muted);font-size:16px}
+.job li{margin-bottom:8px}
+.job .steps{font-size:14px;color:var(--muted);margin-bottom:14px}
+@media (max-width:820px){.job{grid-template-columns:1fr;gap:10px}}
+
+/* skills */
+.skills{background:var(--surface);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.sk-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:40px}
+.sk-grid h4{font-size:13px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--accent-2);margin-bottom:16px}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chips span{background:var(--bg);border:1px solid var(--line);font-size:14px;padding:6px 13px;border-radius:999px}
+.chips span.x{border-color:var(--accent);color:var(--accent);font-weight:600}
+.legend{font-size:13px;color:var(--muted);margin-top:14px}
+.edu{margin-top:56px;padding-top:40px;border-top:1px solid var(--line);display:grid;grid-template-columns:260px 1fr;gap:48px}
+.edu h3{font-family:var(--serif);font-weight:500;font-size:24px;margin-bottom:4px}
+.edu p{color:var(--muted)}
+@media (max-width:900px){.sk-grid{grid-template-columns:1fr;gap:32px}.edu{grid-template-columns:1fr;gap:12px}}
+
+/* contact */
+.contact{text-align:center;padding:120px 0}
+.contact h2{font-size:clamp(36px,5vw,58px);max-width:780px;margin:0 auto 20px}
+.contact p{color:var(--muted);font-size:19px;max-width:560px;margin:0 auto 36px}
+.contact .cta{justify-content:center}
+.phones{margin-top:28px;font-size:15px;color:var(--muted)}
+.phones a{text-decoration:none;font-weight:600;color:var(--ink)}
+footer{border-top:1px solid var(--line);padding:28px 0;font-size:13px;color:var(--muted)}
+footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
+
+.reveal{opacity:0;transform:translateY(16px);transition:opacity .7s ease,transform .7s ease}
+.reveal.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
+@media print{nav,.cta{display:none}.reveal{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <a class="brand" href="#top">Marwan Abdulgawad</a>
+    <ul class="navlinks">
+      <li><a href="#about">About</a></li>
+      <li><a href="#work">Work</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#skills">Skills</a></li>
+    </ul>
+    <a class="btn solid" href="#contact">Get in touch</a>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="wrap">
+    <div>
+      <div class="eyebrow">Project Manager · Arts, Culture &amp; Events</div>
+      <h1>Exhibitions, programs and launches, <em>delivered on time.</em></h1>
+      <p class="lede">I manage the full lifecycle of cultural and business programs across Saudi Arabia and Egypt, from scope and vendors to installation day and close-out. Currently leading temporary exhibitions at the Red Sea Museum in Jeddah.</p>
+      <div class="cta">
+        <a class="btn solid" href="#work">See selected work</a>
+        <a class="btn ghost" href="https://www.linkedin.com/in/marwan-abdulgawad/" target="_blank" rel="noopener">LinkedIn ↗</a>
+      </div>
+      <div class="loc"><span class="dot"></span> Based in Jeddah, KSA · Open to project and program management roles</div>
+    </div>
+    <div class="portrait">
+      <img src="assets/marwan.jpg" alt="Portrait of Marwan Abdulgawad" width="720" height="900">
+    </div>
+  </div>
+</header>
+
+<div class="stats">
+  <div class="wrap">
+    <div class="stat"><b>9 yrs</b><small>Across arts &amp; culture, SaaS and startups</small></div>
+    <div class="stat"><b>30–70</b><small>External contributors per exhibition</small></div>
+    <div class="stat"><b>100+</b><small>Artifacts installed with conservation-grade handling</small></div>
+    <div class="stat"><b>20+</b><small>Startups supported through incubation</small></div>
+    <div class="stat"><b>50%</b><small>Cut in client onboarding time at ULTATEL</small></div>
+  </div>
+</div>
+
+<section class="about" id="about">
+  <div class="wrap">
+    <div class="sec-head reveal"><div class="num">01 · About</div><h2>How I work</h2></div>
+    <div class="body-grid reveal">
+      <div></div>
+      <div>
+        <p class="quote">“Nine years in, I have learned that project management is mostly about keeping promises: to clients, to teams, and to a budget.”</p>
+        <p>My background spans arts and culture program management, SaaS account management and customer success, and startup business development. That mix means I am as comfortable negotiating with a showcase vendor as I am configuring a client's CRM or running a pitch night.</p>
+        <p>I focus on practical problem-solving, clear communication and early risk detection. I coordinate stakeholders, manage contracts and billing, and oversee programs end to end, so that projects land on time and meet the objectives they were funded for.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="work" id="work">
+  <div class="wrap">
+    <div class="sec-head reveal"><div class="num">02 · Selected Work</div><h2>Projects &amp; events</h2></div>
+
+    <article class="feature reveal">
+      <div class="art">
+        <svg viewBox="0 0 200 200" fill="none" stroke="currentColor" stroke-width="2"><path d="M0 60 Q25 40 50 60 T100 60 T150 60 T200 60"/><path d="M0 90 Q25 70 50 90 T100 90 T150 90 T200 90"/><path d="M0 120 Q25 100 50 120 T100 120 T150 120 T200 120"/><path d="M0 150 Q25 130 50 150 T100 150 T150 150 T200 150"/></svg>
+        <div class="tag">Heritage Exhibition · Ministry of Culture</div>
+        <div><h3>Sunken Treasures</h3><div class="where">Red Sea Museum, Jeddah</div></div>
+      </div>
+      <div class="txt">
+        <p>A temporary exhibition of around 100 ancient artifacts recovered from underwater archaeological sites, presented in conservation-grade cases with printed interpretation and family programming. It drew 5,000 to 15,000 visitors per run.</p>
+        <p>When the exhibition was moved earlier in the program, I rebuilt the plan around the compressed timeline, held scope, and delivered the opening on the revised schedule, then led a controlled deinstallation with a certified conservator.</p>
+        <div class="facts"><span>~100 artifacts</span><span>5K–15K visitors</span><span>Vendor sourcing &amp; contracts</span><span>Install &amp; deinstall</span></div>
+        <div class="role"><b>My role:</b> Project Manager, Sawaya for Arts &amp; Culture. End-to-end delivery from RFP to close-out.</div>
+        <a class="btn ghost" style="margin-top:22px" href="https://app.notion.com/p/342d089dad5780c0af03ca1d5d81fbdb" target="_blank" rel="noopener">View project ↗</a>
+      </div>
+    </article>
+
+    <article class="feature reveal">
+      <div class="art alt">
+        <svg viewBox="0 0 200 200" fill="none" stroke="currentColor" stroke-width="2"><rect x="20" y="20" width="70" height="70"/><rect x="110" y="20" width="70" height="70"/><rect x="20" y="110" width="70" height="70"/><rect x="110" y="110" width="70" height="70"/><circle cx="100" cy="100" r="30"/></svg>
+        <div class="tag">Artist Residency · Visual Arts Commission</div>
+        <div><h3>Intermix Residency III</h3><div class="where">JAX District, Riyadh</div></div>
+      </div>
+      <div class="txt">
+        <p>A three-month residency hosted by the Visual Arts Commission and Sawaya for Arts &amp; Culture, bringing together 45 residents: emerging and mid-career visual artists, fashion designers and curators from Saudi Arabia and abroad.</p>
+        <p>The program combined dedicated studios, mentorship, workshops, cultural excursions and public open-studio events, ending in showcases that crossed the line between art and fashion.</p>
+        <div class="facts"><span>45 residents</span><span>3 months</span><span>Studios, workshops, open studios</span></div>
+        <div class="role"><b>My role:</b> Project Coordinator, Sawaya for Arts &amp; Culture. End-to-end delivery of the third cycle: selection, jury, housing, flights, studios and workshops.</div>
+        <a class="btn ghost" style="margin-top:22px" href="https://app.notion.com/p/342d089dad5780b3a907f523eafc7d45" target="_blank" rel="noopener">View project ↗</a>
+      </div>
+    </article>
+
+    <div class="mini">
+      <div class="card reveal">
+        <div class="tag">Incubation Program</div>
+        <h3>MINT Incubator, Cycle 13</h3>
+        <p>Led the MINT by EG Bank Incubator with Alex Angels as Program Manager at TECHNE, taking 20+ startups through selection, mentorship and pitch nights.</p>
+        <a class="more" href="https://app.notion.com/p/272d089dad578101a3dce9750cc9725c" target="_blank" rel="noopener">View project ↗</a>
+        <a class="more" style="margin-top:8px" href="https://www.linkedin.com/posts/mint-incubator_here-are-some-snippets-of-how-mint-incubator-activity-7159905392058085376-9UNN" target="_blank" rel="noopener">LinkedIn highlights ↗</a>
+      </div>
+      <div class="card reveal">
+        <div class="tag">Conference</div>
+        <h3>TECHNE Summit Cairo ’24</h3>
+        <p>Led as Program Manager at TECHNE, coordinating operations across logistics, marketing, growth and partners.</p>
+      </div>
+      <div class="card reveal">
+        <div class="tag">Competition</div>
+        <h3>GIZ “Empower Her” Competition</h3>
+        <p>Led the GIZ-backed Empower Her Competition as part of TECHNE's incubation programs.</p>
+        <a class="more" href="https://app.notion.com/p/272d089dad5781009412e90afa09937b" target="_blank" rel="noopener">View project ↗</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="services">
+  <div class="wrap">
+    <div class="sec-head reveal"><div class="num">03 · Services</div><h2>What I can take on</h2></div>
+    <div class="svc reveal">
+      <details open>
+        <summary><h3>Program &amp; Event Management</h3></summary>
+        <ul>
+          <li>Designed and ran boot camps, workshops, speaking panels and pitch nights</li>
+          <li>Coordinated mentors, startups and stakeholders</li>
+          <li>Delivered large-scale events with smooth logistics</li>
+          <li>Supported 100+ startups through structured programs</li>
+        </ul>
+        <div class="for"><b>Delivered for:</b> TECHNE Summit, Markade Agency, Alex Angels, MINT Incubator, GIZ, INSCA</div>
+      </details>
+      <details open>
+        <summary><h3>Vendor &amp; Partner Negotiation</h3></summary>
+        <ul>
+          <li>Broke down RFPs and sourced vendors for showcases, printing and production</li>
+          <li>Compared proposals, checked pricing against budget and shortlisted suppliers</li>
+          <li>Managed vendor contracts through delivery and close-out</li>
+        </ul>
+        <div class="for"><b>Delivered for:</b> Red Sea Museum exhibitions, Sawaya for Arts &amp; Culture</div>
+      </details>
+      <details open>
+        <summary><h3>Operations &amp; Workflow Optimization</h3></summary>
+        <ul>
+          <li>Balanced daily onboarding tasks across CRM pipelines</li>
+          <li>Managed billing adjustments and account activations</li>
+          <li>Coordinated event logistics and partner deliverables</li>
+          <li>Reduced errors by keeping records accurate and structured</li>
+        </ul>
+        <div class="for"><b>Delivered for:</b> INDEX, Global Process Telecom, TECHNE Summit, Markade Agency, Alex Angels, MINT Incubator, GIZ</div>
+      </details>
+      <details open>
+        <summary><h3>Client Onboarding &amp; Account Management</h3></summary>
+        <ul>
+          <li>Managed the end-to-end onboarding cycle for VoIP clients</li>
+          <li>Set up accounts, billing and technical configurations</li>
+          <li>Onboarded 20+ clients and cut onboarding time by 50% at ULTATEL</li>
+          <li>Ensured clean handoffs to long-term support</li>
+        </ul>
+        <div class="for"><b>Delivered for:</b> ULTATEL, CallBlade</div>
+      </details>
+      <details open>
+        <summary><h3>Customer Support &amp; CRM</h3></summary>
+        <ul>
+          <li>Delivered L1 and L2 technical support and troubleshooting</li>
+          <li>Resolved billing and service issues in real time</li>
+          <li>Built trust through consistent follow-up</li>
+        </ul>
+        <div class="for"><b>Delivered for:</b> ULTATEL, CallBlade, TECHNE</div>
+      </details>
+      <details open>
+        <summary><h3>Back-Office &amp; Process Support</h3></summary>
+        <ul>
+          <li>Handled reporting, documentation and operational tasks</li>
+          <li>Kept client and account records accurate</li>
+          <li>Improved turnaround time on back-office requests</li>
+        </ul>
+        <div class="for"><b>Delivered for:</b> CallBlade, TECHNE, ULTATEL</div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<section id="experience">
+  <div class="wrap">
+    <div class="sec-head reveal"><div class="num">04 · Experience</div><h2>Where I've worked</h2></div>
+    <div class="exp">
+      <div class="job reveal">
+        <div class="when"><span class="co">Sawaya for Arts &amp; Culture</span>Oct 2025 – Present · KSA</div>
+        <div>
+          <h3>Project Manager</h3>
+          <p class="steps">Dec 2025 – Present · Jeddah</p>
+          <ul>
+            <li>Manage the full lifecycle of two temporary exhibitions at the Red Sea Museum, each with 30 to 70 external contributors over three to six month production cycles.</li>
+            <li>Lead multidisciplinary teams across production, logistics, design, curation and public programs, with budgets averaging SAR 1 to 3 million per exhibition.</li>
+            <li>Delivered 100% on-time installation and deinstallation for 100+ artifacts, including conservation-aware handling and technical setup.</li>
+            <li>Build partnerships with international and regional institutions for co-produced exhibitions reaching 5,000 to 15,000 visitors.</li>
+          </ul>
+          <h3 style="margin-top:26px">Project Coordinator</h3>
+          <p class="steps">Oct 2025 – Dec 2025 · Riyadh</p>
+          <ul>
+            <li>Led end-to-end delivery of the third cycle of the Intermix Residency, a multidisciplinary visual arts and fashion program for 45 residents.</li>
+            <li>Handled candidate selection, jury coordination, housing, flights, studio setup and workshops for emerging and mid-career artists.</li>
+            <li>Monitored risks and partner performance and gave senior leadership recommendations on program outcomes.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="job reveal">
+        <div class="when"><span class="co">ULTATEL</span>Aug 2024 – Oct 2025 · Remote (Virginia, USA)</div>
+        <div>
+          <h3>Account Manager, SaaS Onboarding &amp; Client Success</h3>
+          <ul>
+            <li>Managed end-to-end client onboarding for a US SaaS platform, including CRM integration (HubSpot, Zoho), cloud account setup, billing and L2 technical support.</li>
+            <li>Served as the main client contact through setup, migration, number porting and post-launch.</li>
+            <li>Cut onboarding time by 50% through workflow automation and process restructuring.</li>
+            <li>Worked across Microsoft Dynamics, Zendesk, Pipedrive and Salesforce to improve client CRM functionality.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="job reveal">
+        <div class="when"><span class="co">TECHNE</span>Jan 2024 – Aug 2024 · Alexandria, Egypt</div>
+        <div>
+          <h3>Program Manager</h3>
+          <ul>
+            <li>Led incubation programs including the MINT by EG Bank Incubator, the GIZ Empower Her Competition and TECHNE Summit Cairo '24.</li>
+            <li>Coordinated cross-functional operations across investment, growth, logistics, marketing and business development.</li>
+            <li>Oversaw incubation, education, innovation and startup acceleration programs.</li>
+            <li>Managed multimillion-dollar investment projects across multiple internal teams.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="job reveal">
+        <div class="when"><span class="co">INDEX.DEV</span>Jul 2022 – Jan 2023 · Remote (London, UK)</div>
+        <div>
+          <h3>Business Development</h3>
+          <ul>
+            <li>Grew the customer base by 70% through targeted outreach and CRM-driven insights.</li>
+            <li>Engaged 100 to 230 potential clients daily and onboarded 10+ new network members each month.</li>
+            <li>Used advanced Excel, app scripts and data-scraping tools to build reports and improve data accuracy.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="job reveal">
+        <div class="when"><span class="co">CallBlade</span>Dec 2017 – Dec 2021 · Remote (Fort Lauderdale, USA)</div>
+        <div>
+          <h3>Back-Office Specialist → Back Office Executive → Account Manager</h3>
+          <ul>
+            <li>Improved campaign performance by 50% through data-driven optimization for three major clients.</li>
+            <li>Managed payroll, licensing and contract processes for 150+ members, working with HR, legal, finance and the C-suite.</li>
+            <li>Reviewed and approved contracts and licenses, and built QA methodologies that kept team operations consistent.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="skills" id="skills">
+  <div class="wrap">
+    <div class="sec-head reveal"><div class="num">05 · Skills</div><h2>Toolkit</h2></div>
+    <div class="sk-grid reveal">
+      <div>
+        <h4>Core strengths</h4>
+        <div class="chips">
+          <span>Event &amp; project management</span><span>Client relationship management</span><span>Leadership &amp; team management</span><span>Cross-team collaboration</span><span>Problem-solving</span><span>Time management</span><span>Critical thinking</span><span>Customer-centric mindset</span>
+        </div>
+      </div>
+      <div>
+        <h4>Technical areas</h4>
+        <div class="chips">
+          <span>Events &amp; programs tools</span><span>VoIP systems &amp; account setup</span><span>Data management &amp; reporting</span><span>Automation &amp; scripting</span><span>Collaboration platforms</span><span>CRMs</span>
+        </div>
+      </div>
+      <div>
+        <h4>Software</h4>
+        <div class="chips">
+          <span class="x">Excel</span><span class="x">Microsoft 365</span><span class="x">Google Workspace</span><span class="x">Outlook</span><span class="x">Gmail</span><span class="x">Slack</span><span class="x">Zoom</span><span class="x">SurveyMonkey</span><span class="x">ULTATEL HUB</span>
+          <span>HubSpot</span><span>Zoho CRM</span><span>Close CRM</span><span>Notion</span><span>ClickUp</span><span>Mailchimp</span><span>Crunchbase</span><span>VICIdial</span><span>Photoshop</span><span>Premiere Pro</span><span>Python</span><span>VS Code</span>
+        </div>
+        <div class="legend">Outlined = expert level</div>
+      </div>
+    </div>
+    <div class="edu reveal">
+      <div class="num" style="font-size:13px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--accent-2)">Education</div>
+      <div>
+        <h3>Bachelor's Degree in Business Administration</h3>
+        <p>Arab Academy for Science, Technology &amp; Maritime Transport (AAST)</p>
+        <p style="font-size:15px;margin-top:10px">Coursework included operations and project management, market research, customer relationship management, entrepreneurship and innovation, and organizational behavior.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap reveal">
+    <div class="eyebrow">06 · Contact</div>
+    <h2>Have an exhibition, program or launch that needs to land?</h2>
+    <p>I am open to project and program management roles in Saudi Arabia, Egypt and the wider GCC, as well as project-based work.</p>
+    <div class="cta">
+      <a class="btn solid" href="mailto:marwanabdulgawad95@gmail.com">marwanabdulgawad95@gmail.com</a>
+      <a class="btn ghost" href="https://www.linkedin.com/in/marwan-abdulgawad/" target="_blank" rel="noopener">LinkedIn ↗</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span>© <span id="y">2026</span> Marwan Abdulgawad</span>
+    <span>Jeddah, Saudi Arabia</span>
+  </div>
+</footer>
+
+<script>
+document.getElementById('y').textContent=new Date().getFullYear();
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
