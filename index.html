@@ -7,7 +7,7 @@
 <meta name="description" content="Project manager with nine years of experience across arts and culture, SaaS, and startup ecosystems. Exhibitions at the Red Sea Museum, artist residencies, incubators, and client onboarding.">
 <meta property="og:title" content="Marwan Abdulgawad | Project Manager">
 <meta property="og:description" content="Exhibitions, residencies, programs and client delivery across KSA and Egypt.">
-<meta property="og:image" content="assets/og.jpg">
+<meta property="og:image" content="og.jpg">
 <meta property="og:type" content="website">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23143a3f'/%3E%3Ctext x='32' y='42' font-family='Georgia,serif' font-size='28' fill='%23f3ece0' text-anchor='middle'%3EMA%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -55,6 +55,7 @@ h1 em{font-style:italic;color:var(--accent)}
 .cta{display:flex;gap:12px;flex-wrap:wrap}
 .portrait{position:relative}
 .portrait img{border-radius:6px;aspect-ratio:4/5;object-fit:cover;width:100%;filter:saturate(.9)}
+@media (min-width:821px){.hero{padding:40px 0}.portrait{max-width:min(400px,calc((100vh - 170px)*.8));justify-self:end;width:100%}}
 .portrait::before{content:"";position:absolute;inset:18px -18px -18px 18px;border:1.5px solid var(--accent-2);border-radius:6px;z-index:-1}
 .loc{margin-top:28px;font-size:14px;color:var(--muted);display:flex;align-items:center;gap:8px}
 .loc span.dot{width:8px;height:8px;border-radius:50%;background:#3a9a6a;display:inline-block}
@@ -156,10 +157,80 @@ h2{font-family:var(--serif);font-weight:500;font-size:clamp(32px,4vw,46px);line-
 footer{border-top:1px solid var(--line);padding:28px 0;font-size:13px;color:var(--muted)}
 footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
 
-.reveal{opacity:0;transform:translateY(16px);transition:opacity .7s ease,transform .7s ease}
+
+
+/* gallery */
+.feature .gallery{position:relative;min-height:440px;overflow:hidden;background:#111}
+.feature .gallery .main{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:opacity .35s ease}
+.feature .gallery::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,0) 40%,rgba(0,0,0,.72) 100%);pointer-events:none}
+.feature .gallery .cap{position:absolute;left:36px;right:36px;bottom:32px;z-index:1;color:#fff}
+.feature .gallery .tag{font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;opacity:.85;margin-bottom:10px}
+.feature .gallery h3{font-family:var(--serif);font-weight:500;font-size:34px;line-height:1.1;letter-spacing:-.015em}
+.feature .gallery .where{font-size:15px;opacity:.85;margin-top:6px}
+.thumbs{display:flex;gap:8px;margin-top:18px;flex-wrap:wrap}
+.thumbs .th{width:62px;height:46px;border-radius:5px;overflow:hidden;border:2px solid transparent;padding:0;cursor:pointer;background:none;opacity:.7;transition:.2s}
+.thumbs .th img{width:100%;height:100%;object-fit:cover}
+.thumbs .th:hover{opacity:1}
+.thumbs .th.on{border-color:var(--accent-2);opacity:1}
+@media (max-width:820px){.feature .gallery{min-height:300px}.feature .gallery .cap{left:24px;bottom:22px}.feature .gallery h3{font-size:28px}}
+.card .pic{margin:-28px -28px 22px;height:180px;overflow:hidden;border-radius:8px 8px 0 0;background:#fff}
+.card .pic img{width:100%;height:100%;object-fit:cover}
+.card .pic.logo{display:flex;align-items:center;justify-content:center;padding:28px}
+.card .pic.logo img{object-fit:contain}
+
+/* certifications */
+.cert-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.cert{display:flex;gap:16px;align-items:flex-start;border:1px solid var(--line);border-radius:8px;padding:24px;background:var(--surface)}
+.cert .ic{flex-shrink:0;width:38px;height:38px;border-radius:50%;background:var(--accent);color:var(--bg);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:17px}
+.cert h3{font-family:var(--serif);font-weight:500;font-size:20px;line-height:1.25;margin-bottom:6px}
+.cert span{font-size:13px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+.cert.prog{border-style:dashed;border-color:var(--accent-2)}
+.cert.prog .ic{background:var(--accent-2)}
+.cert.prog span{color:var(--accent-2)}
+@media (max-width:900px){.cert-grid{grid-template-columns:1fr 1fr}}
+@media (max-width:560px){.cert-grid{grid-template-columns:1fr}}
+
+/* ===== presentation mode ===== */
+html{scroll-snap-type:y proximity;scroll-padding-top:64px}
+.slide{position:relative;overflow:hidden;scroll-snap-align:start;min-height:calc(100vh - 64px);min-height:calc(100svh - 64px);display:flex;flex-direction:column;justify-content:center}
+.slide>.wrap{width:100%;position:relative;z-index:1}
+.bignum{position:absolute;right:3vw;bottom:-2vw;font-family:var(--serif);font-weight:500;font-size:clamp(140px,22vw,320px);line-height:1;letter-spacing:-.04em;color:var(--ink);opacity:.045;pointer-events:none;user-select:none;z-index:0}
+.stats{border:none;background:none}
+.numbers{background:var(--accent);color:var(--bg)}
+.numbers .sec-head .num{color:color-mix(in srgb,var(--bg) 70%,transparent)}
+.numbers .stats .wrap,.numbers .stats{display:grid;grid-template-columns:repeat(3,1fr);row-gap:34px}
+.numbers .stat{border-left:1px solid color-mix(in srgb,var(--bg) 22%,transparent);padding:10px 22px}
+.numbers .stat:nth-child(3n+1){border-left:none;padding-left:0}
+.numbers .stat b{color:var(--bg);font-size:clamp(34px,4vw,52px)}
+.numbers .stat small{color:color-mix(in srgb,var(--bg) 75%,transparent);font-size:14px}
+.numbers .bignum,.contact .bignum{color:var(--bg);opacity:.08}
+@media (max-width:820px){.numbers .stats{grid-template-columns:1fr 1fr;gap:0}.numbers .stat,.numbers .stat:first-child{border-left:none;padding:18px 0;border-bottom:1px solid color-mix(in srgb,var(--bg) 18%,transparent)}.numbers .stat:last-child{border-bottom:none}.numbers .stat:nth-child(even){padding-left:18px;border-left:1px solid color-mix(in srgb,var(--bg) 18%,transparent)}}
+.contact{background:var(--accent-2);color:var(--bg)}
+.contact p{color:color-mix(in srgb,var(--bg) 82%,transparent)}
+.contact .eyebrow{color:color-mix(in srgb,var(--bg) 75%,transparent)}
+.contact .btn.solid{background:var(--bg);color:var(--accent-2);border-color:var(--bg)}
+.contact .btn.ghost{color:var(--bg);border-color:var(--bg)}
+.contact .btn.ghost:hover{background:var(--bg);color:var(--accent-2)}
+footer{background:var(--accent-2);color:color-mix(in srgb,var(--bg) 75%,transparent);border-top:1px solid color-mix(in srgb,var(--bg) 20%,transparent)}
+
+/* headline curtain wipe */
+.sec-head h2,h1.wipe,.contact h2{clip-path:inset(-10% 100% -20% 0);transition:clip-path 1.1s cubic-bezier(.7,0,.2,1) .25s}
+.in .sec-head h2,.sec-head.in h2,.eyebrow.in+h1.wipe,.contact .in h2{clip-path:inset(-10% -5% -20% 0)}
+
+/* side dots */
+.dots{position:fixed;right:22px;top:50%;transform:translateY(-50%);z-index:20;display:flex;flex-direction:column;gap:12px}
+.dots a{display:flex;align-items:center;justify-content:flex-end;gap:10px;text-decoration:none}
+.dots a i{width:9px;height:9px;border-radius:50%;border:1.5px solid var(--accent);background:var(--bg);box-shadow:0 0 0 2px color-mix(in srgb,var(--bg) 70%,transparent);transition:.3s}
+.dots a span{font-size:12px;font-weight:700;color:var(--accent);background:var(--bg);padding:3px 8px;border-radius:4px;opacity:0;transform:translateX(6px);transition:.25s;white-space:nowrap}
+.dots a:hover span{opacity:1;transform:none}
+.dots a.on i{background:var(--accent);transform:scale(1.3)}
+@media (max-width:820px){.dots{display:none}.slide{min-height:auto}}
+@media (prefers-reduced-motion:reduce){.sec-head h2,h1.wipe,.contact h2{clip-path:none;transition:none}html{scroll-snap-type:none}}
+
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .8s ease,transform .8s ease}
 .reveal.in{opacity:1;transform:none}
 @media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
-@media print{nav,.cta{display:none}.reveal{opacity:1;transform:none}}
+@media print{nav,.cta,.dots,.bignum{display:none}.sec-head h2,h1.wipe,.contact h2{clip-path:none}html{scroll-snap-type:none}.reveal{opacity:1;transform:none}}
 </style>
 </head>
 <body>
@@ -178,77 +249,85 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
   </div>
 </nav>
 
-<header class="hero" id="top">
+<header class="hero slide" id="top" data-label="Intro">
+  <div class="bignum">01</div>
   <div class="wrap">
     <div>
-      <div class="eyebrow">Project Manager · Arts, Culture &amp; Events</div>
-      <h1>Exhibitions, programs and launches, <em>delivered on time.</em></h1>
-      <p class="lede">I manage the full lifecycle of cultural and business programs across Saudi Arabia and Egypt, from scope and vendors to installation day and close-out. Currently leading temporary exhibitions at the Red Sea Museum in Jeddah.</p>
-      <div class="cta">
+      <div class="eyebrow reveal">Project Manager · Arts, Culture &amp; Events</div>
+      <h1 class="wipe">Exhibitions, programs and launches, <em>delivered on time.</em></h1>
+      <p class="lede reveal">I plan and deliver projects end to end, from scope and vendors to launch day and close-out, across arts and culture, SaaS and startup programs. Most recently: temporary exhibitions at the Red Sea Museum in Jeddah.</p>
+      <div class="cta reveal">
         <a class="btn solid" href="#work">See selected work</a>
         <a class="btn ghost" href="https://www.linkedin.com/in/marwan-abdulgawad/" target="_blank" rel="noopener">LinkedIn ↗</a>
       </div>
-      <div class="loc"><span class="dot"></span> Based in Jeddah, KSA · Open to project and program management roles</div>
+      <div class="loc reveal"><span class="dot"></span> Based in Egypt · Open to relocation and travel when needed</div>
     </div>
-    <div class="portrait">
-      <img src="assets/marwan.jpg" alt="Portrait of Marwan Abdulgawad" width="720" height="900">
+    <div class="portrait reveal">
+      <img src="marwan.jpg" alt="Portrait of Marwan Abdulgawad" width="720" height="900">
     </div>
   </div>
 </header>
 
-<div class="stats">
+<section class="numbers slide" id="numbers" data-label="By the numbers">
+  <div class="bignum">02</div>
   <div class="wrap">
-    <div class="stat"><b>9 yrs</b><small>Across arts &amp; culture, SaaS and startups</small></div>
-    <div class="stat"><b>30–70</b><small>External contributors per exhibition</small></div>
-    <div class="stat"><b>100+</b><small>Artifacts installed with conservation-grade handling</small></div>
-    <div class="stat"><b>20+</b><small>Startups supported through incubation</small></div>
-    <div class="stat"><b>50%</b><small>Cut in client onboarding time at ULTATEL</small></div>
+    <div class="sec-head reveal"><div class="num">02 · By the numbers</div><h2>Nine years of keeping promises.</h2></div>
+    <div class="stats reveal">
+      <div class="stat"><b data-n="9" data-suf=" yrs">9 yrs</b><small>Managing projects across arts &amp; culture, SaaS and startups</small></div>
+      <div class="stat"><b data-n="4" data-suf="+">4+</b><small>Events, projects and programs managed end to end</small></div>
+      <div class="stat"><b data-n="70" data-pre="30–">30–70</b><small>External contributors coordinated per exhibition</small></div>
+      <div class="stat"><b data-n="100" data-suf="+">100+</b><small>Artifacts installed with conservation-grade handling</small></div>
+      <div class="stat"><b data-n="20" data-suf="+">20+</b><small>Startups taken through incubation programs</small></div>
+      <div class="stat"><b data-n="45">45</b><small>Artists and designers hosted in one residency cycle</small></div>
+    </div>
   </div>
-</div>
+</section>
 
-<section class="about" id="about">
+<section class="about slide" id="about" data-label="About">
+  <div class="bignum">03</div>
   <div class="wrap">
-    <div class="sec-head reveal"><div class="num">01 · About</div><h2>How I work</h2></div>
+    <div class="sec-head reveal"><div class="num">03 · About</div><h2>How I work</h2></div>
     <div class="body-grid reveal">
       <div></div>
       <div>
         <p class="quote">“Nine years in, I have learned that project management is mostly about keeping promises: to clients, to teams, and to a budget.”</p>
-        <p>My background spans arts and culture program management, SaaS account management and customer success, and startup business development. That mix means I am as comfortable negotiating with a showcase vendor as I am configuring a client's CRM or running a pitch night.</p>
-        <p>I focus on practical problem-solving, clear communication and early risk detection. I coordinate stakeholders, manage contracts and billing, and oversee programs end to end, so that projects land on time and meet the objectives they were funded for.</p>
+        <p>Every role I have held has been project management at its core. At the Red Sea Museum and the Intermix Residency, the projects were exhibitions and residencies. At ULTATEL, every SaaS client onboarding was a project with its own scope, timeline and go-live. At TECHNE, each incubator cycle and summit was a program to plan, staff and deliver. At INDEX.DEV and CallBlade, it was campaigns, pipelines and operations run against deadlines.</p>
+        <p>The method stays the same in every sector: define the scope early, build a realistic plan, manage vendors and stakeholders, catch risks before they become problems, and close out properly. The result is projects that land on time, on budget, and deliver what they were funded for.</p>
       </div>
     </div>
   </div>
 </section>
 
-<section class="work" id="work">
+<section class="work slide" id="work" data-label="Selected work">
+  <div class="bignum">04</div>
   <div class="wrap">
-    <div class="sec-head reveal"><div class="num">02 · Selected Work</div><h2>Projects &amp; events</h2></div>
+    <div class="sec-head reveal"><div class="num">04 · Selected Work</div><h2>Projects &amp; events</h2></div>
 
     <article class="feature reveal">
-      <div class="art">
-        <svg viewBox="0 0 200 200" fill="none" stroke="currentColor" stroke-width="2"><path d="M0 60 Q25 40 50 60 T100 60 T150 60 T200 60"/><path d="M0 90 Q25 70 50 90 T100 90 T150 90 T200 90"/><path d="M0 120 Q25 100 50 120 T100 120 T150 120 T200 120"/><path d="M0 150 Q25 130 50 150 T100 150 T150 150 T200 150"/></svg>
-        <div class="tag">Heritage Exhibition · Ministry of Culture</div>
-        <div><h3>Sunken Treasures</h3><div class="where">Red Sea Museum, Jeddah</div></div>
+      <div class="gallery">
+        <img class="main" src="pf-sunken-3.jpg" alt="Sunken Treasures exhibition at the Red Sea Museum" loading="lazy">
+        <div class="cap"><div class="tag">Heritage Exhibition · Ministry of Culture</div><h3>Sunken Treasures</h3><div class="where">Red Sea Museum, Jeddah</div></div>
       </div>
       <div class="txt">
         <p>A temporary exhibition of around 100 ancient artifacts recovered from underwater archaeological sites, presented in conservation-grade cases with printed interpretation and family programming. It drew 5,000 to 15,000 visitors per run.</p>
         <p>When the exhibition was moved earlier in the program, I rebuilt the plan around the compressed timeline, held scope, and delivered the opening on the revised schedule, then led a controlled deinstallation with a certified conservator.</p>
         <div class="facts"><span>~100 artifacts</span><span>5K–15K visitors</span><span>Vendor sourcing &amp; contracts</span><span>Install &amp; deinstall</span></div>
+        <div class="thumbs"><button type="button" class="th on" data-src="pf-sunken-3.jpg" aria-label="Show photo 1"><img src="pf-sunken-3.jpg" alt="" loading="lazy"></button><button type="button" class="th" data-src="pf-sunken-2.jpg" aria-label="Show photo 2"><img src="pf-sunken-2.jpg" alt="" loading="lazy"></button><button type="button" class="th" data-src="pf-sunken-1.jpg" aria-label="Show photo 3"><img src="pf-sunken-1.jpg" alt="" loading="lazy"></button><button type="button" class="th" data-src="pf-sunken-4.jpg" aria-label="Show photo 4"><img src="pf-sunken-4.jpg" alt="" loading="lazy"></button><button type="button" class="th" data-src="pf-sunken-5.jpg" aria-label="Show photo 5"><img src="pf-sunken-5.jpg" alt="" loading="lazy"></button></div>
         <div class="role"><b>My role:</b> Project Manager, Sawaya for Arts &amp; Culture. End-to-end delivery from RFP to close-out.</div>
         <a class="btn ghost" style="margin-top:22px" href="https://app.notion.com/p/342d089dad5780c0af03ca1d5d81fbdb" target="_blank" rel="noopener">View project ↗</a>
       </div>
     </article>
 
     <article class="feature reveal">
-      <div class="art alt">
-        <svg viewBox="0 0 200 200" fill="none" stroke="currentColor" stroke-width="2"><rect x="20" y="20" width="70" height="70"/><rect x="110" y="20" width="70" height="70"/><rect x="20" y="110" width="70" height="70"/><rect x="110" y="110" width="70" height="70"/><circle cx="100" cy="100" r="30"/></svg>
-        <div class="tag">Artist Residency · Visual Arts Commission</div>
-        <div><h3>Intermix Residency III</h3><div class="where">JAX District, Riyadh</div></div>
+      <div class="gallery">
+        <img class="main" src="pf-intermix-2.jpg" alt="Open studio event at the Intermix Residency in Riyadh" loading="lazy">
+        <div class="cap"><div class="tag">Artist Residency · Visual Arts Commission</div><h3>Intermix Residency III</h3><div class="where">JAX District, Riyadh</div></div>
       </div>
       <div class="txt">
         <p>A three-month residency hosted by the Visual Arts Commission and Sawaya for Arts &amp; Culture, bringing together 45 residents: emerging and mid-career visual artists, fashion designers and curators from Saudi Arabia and abroad.</p>
         <p>The program combined dedicated studios, mentorship, workshops, cultural excursions and public open-studio events, ending in showcases that crossed the line between art and fashion.</p>
         <div class="facts"><span>45 residents</span><span>3 months</span><span>Studios, workshops, open studios</span></div>
+        <div class="thumbs"><button type="button" class="th on" data-src="pf-intermix-2.jpg" aria-label="Show photo 1"><img src="pf-intermix-2.jpg" alt="" loading="lazy"></button><button type="button" class="th" data-src="pf-intermix-1.jpg" aria-label="Show photo 2"><img src="pf-intermix-1.jpg" alt="" loading="lazy"></button><button type="button" class="th" data-src="pf-intermix-3.jpg" aria-label="Show photo 3"><img src="pf-intermix-3.jpg" alt="" loading="lazy"></button><button type="button" class="th" data-src="pf-intermix-4.jpg" aria-label="Show photo 4"><img src="pf-intermix-4.jpg" alt="" loading="lazy"></button></div>
         <div class="role"><b>My role:</b> Project Coordinator, Sawaya for Arts &amp; Culture. End-to-end delivery of the third cycle: selection, jury, housing, flights, studios and workshops.</div>
         <a class="btn ghost" style="margin-top:22px" href="https://app.notion.com/p/342d089dad5780b3a907f523eafc7d45" target="_blank" rel="noopener">View project ↗</a>
       </div>
@@ -256,6 +335,7 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
 
     <div class="mini">
       <div class="card reveal">
+        <div class="pic"><img src="pf-mint-1.jpg" alt="MINT Incubator Cycle 13 session" loading="lazy"></div>
         <div class="tag">Incubation Program</div>
         <h3>MINT Incubator, Cycle 13</h3>
         <p>Led the MINT by EG Bank Incubator with Alex Angels as Program Manager at TECHNE, taking 20+ startups through selection, mentorship and pitch nights.</p>
@@ -263,11 +343,13 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
         <a class="more" style="margin-top:8px" href="https://www.linkedin.com/posts/mint-incubator_here-are-some-snippets-of-how-mint-incubator-activity-7159905392058085376-9UNN" target="_blank" rel="noopener">LinkedIn highlights ↗</a>
       </div>
       <div class="card reveal">
+        <div class="pic logo"><img src="pf-techne-1.jpg" alt="TECHNE Summit Cairo logo" loading="lazy"></div>
         <div class="tag">Conference</div>
         <h3>TECHNE Summit Cairo ’24</h3>
         <p>Led as Program Manager at TECHNE, coordinating operations across logistics, marketing, growth and partners.</p>
       </div>
       <div class="card reveal">
+        <div class="pic"><img src="pf-empower-1.jpg" alt="Marwan at the Empower Her Champions event" loading="lazy" style="object-position:70% 30%"></div>
         <div class="tag">Competition</div>
         <h3>GIZ “Empower Her” Competition</h3>
         <p>Led the GIZ-backed Empower Her Competition as part of TECHNE's incubation programs.</p>
@@ -277,9 +359,10 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
   </div>
 </section>
 
-<section id="services">
+<section class="slide" id="services" data-label="Services">
+  <div class="bignum">05</div>
   <div class="wrap">
-    <div class="sec-head reveal"><div class="num">03 · Services</div><h2>What I can take on</h2></div>
+    <div class="sec-head reveal"><div class="num">05 · Services</div><h2>What I can take on</h2></div>
     <div class="svc reveal">
       <details open>
         <summary><h3>Program &amp; Event Management</h3></summary>
@@ -342,9 +425,10 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
   </div>
 </section>
 
-<section id="experience">
+<section class="slide" id="experience" data-label="Experience">
+  <div class="bignum">06</div>
   <div class="wrap">
-    <div class="sec-head reveal"><div class="num">04 · Experience</div><h2>Where I've worked</h2></div>
+    <div class="sec-head reveal"><div class="num">06 · Experience</div><h2>Where I've worked</h2></div>
     <div class="exp">
       <div class="job reveal">
         <div class="when"><span class="co">Sawaya for Arts &amp; Culture</span>Oct 2025 – Present · KSA</div>
@@ -367,11 +451,11 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
         </div>
       </div>
       <div class="job reveal">
-        <div class="when"><span class="co">ULTATEL</span>Aug 2024 – Oct 2025 · Remote (Virginia, USA)</div>
+        <div class="when"><span class="co">ULTATEL</span>Aug 2024 – Oct 2025 · Alexandria, Egypt</div>
         <div>
           <h3>Account Manager, SaaS Onboarding &amp; Client Success</h3>
           <ul>
-            <li>Managed end-to-end client onboarding for a US SaaS platform, including CRM integration (HubSpot, Zoho), cloud account setup, billing and L2 technical support.</li>
+            <li>Managed end-to-end onboarding projects for US and UK enterprise clients on a US SaaS platform, including CRM integration (HubSpot, Zoho), cloud account setup, billing and L2 technical support.</li>
             <li>Served as the main client contact through setup, migration, number porting and post-launch.</li>
             <li>Cut onboarding time by 50% through workflow automation and process restructuring.</li>
             <li>Worked across Microsoft Dynamics, Zendesk, Pipedrive and Salesforce to improve client CRM functionality.</li>
@@ -391,21 +475,22 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
         </div>
       </div>
       <div class="job reveal">
-        <div class="when"><span class="co">INDEX.DEV</span>Jul 2022 – Jan 2023 · Remote (London, UK)</div>
+        <div class="when"><span class="co">INDEX.DEV</span>Jul 2022 – Jan 2023 · Alexandria, Egypt</div>
         <div>
           <h3>Business Development</h3>
           <ul>
-            <li>Grew the customer base by 70% through targeted outreach and CRM-driven insights.</li>
+            <li>Served UK enterprise clients, growing the customer base by 70% through targeted outreach and CRM-driven insights.</li>
             <li>Engaged 100 to 230 potential clients daily and onboarded 10+ new network members each month.</li>
             <li>Used advanced Excel, app scripts and data-scraping tools to build reports and improve data accuracy.</li>
           </ul>
         </div>
       </div>
       <div class="job reveal">
-        <div class="when"><span class="co">CallBlade</span>Dec 2017 – Dec 2021 · Remote (Fort Lauderdale, USA)</div>
+        <div class="when"><span class="co">CallBlade</span>Dec 2017 – Dec 2021 · Alexandria, Egypt</div>
         <div>
           <h3>Back-Office Specialist → Back Office Executive → Account Manager</h3>
           <ul>
+            <li>Served US B2B and B2C clients across campaigns, contracts and back-office operations.</li>
             <li>Improved campaign performance by 50% through data-driven optimization for three major clients.</li>
             <li>Managed payroll, licensing and contract processes for 150+ members, working with HR, legal, finance and the C-suite.</li>
             <li>Reviewed and approved contracts and licenses, and built QA methodologies that kept team operations consistent.</li>
@@ -416,9 +501,10 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
   </div>
 </section>
 
-<section class="skills" id="skills">
+<section class="skills slide" id="skills" data-label="Skills">
+  <div class="bignum">07</div>
   <div class="wrap">
-    <div class="sec-head reveal"><div class="num">05 · Skills</div><h2>Toolkit</h2></div>
+    <div class="sec-head reveal"><div class="num">07 · Skills</div><h2>Toolkit</h2></div>
     <div class="sk-grid reveal">
       <div>
         <h4>Core strengths</h4>
@@ -435,10 +521,10 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
       <div>
         <h4>Software</h4>
         <div class="chips">
-          <span class="x">Excel</span><span class="x">Microsoft 365</span><span class="x">Google Workspace</span><span class="x">Outlook</span><span class="x">Gmail</span><span class="x">Slack</span><span class="x">Zoom</span><span class="x">SurveyMonkey</span><span class="x">ULTATEL HUB</span>
-          <span>HubSpot</span><span>Zoho CRM</span><span>Close CRM</span><span>Notion</span><span>ClickUp</span><span>Mailchimp</span><span>Crunchbase</span><span>VICIdial</span><span>Photoshop</span><span>Premiere Pro</span><span>Python</span><span>VS Code</span>
+          <span class="x">Excel</span><span class="x">Microsoft 365</span><span class="x">Google Workspace</span><span class="x">Outlook</span><span class="x">Slack</span><span class="x">Zoom</span><span class="x">ClickUp</span><span class="x">Notion</span><span class="x">Monday.com</span><span class="x">Miro</span><span class="x">Salesforce</span><span class="x">HubSpot</span><span class="x">Zoho CRM</span><span class="x">Zendesk</span><span class="x">SurveyMonkey</span><span class="x">ULTATEL HUB</span>
+          <span>Microsoft Dynamics</span><span>Pipedrive</span><span>Close CRM</span><span>Mailchimp</span><span>Crunchbase</span><span>VICIdial</span><span>Photoshop</span><span>Premiere Pro</span><span>Python</span><span>VS Code</span>
         </div>
-        <div class="legend">Outlined = expert level</div>
+        <div class="legend">Outlined = advanced level</div>
       </div>
     </div>
     <div class="edu reveal">
@@ -452,11 +538,27 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
   </div>
 </section>
 
-<section class="contact" id="contact">
+<section class="certs slide" id="certs" data-label="Certifications">
+  <div class="bignum">08</div>
+  <div class="wrap">
+    <div class="sec-head reveal"><div class="num">08 · Certifications</div><h2>Always sharpening the craft</h2></div>
+    <div class="cert-grid">
+      <div class="cert reveal"><div class="ic">✓</div><div><h3>Excel for Project Management</h3><span>Certified</span></div></div>
+      <div class="cert reveal"><div class="ic">✓</div><div><h3>Project Management Foundations</h3><span>Certified</span></div></div>
+      <div class="cert reveal"><div class="ic">✓</div><div><h3>Project Management Foundations: Budgets</h3><span>Certified</span></div></div>
+      <div class="cert reveal"><div class="ic">✓</div><div><h3>Strategic Project Risk Management</h3><span>Certified</span></div></div>
+      <div class="cert reveal"><div class="ic">✓</div><div><h3>Leading without Formal Authority</h3><span>Certified</span></div></div>
+      <div class="cert reveal prog"><div class="ic">…</div><div><h3>Project Management Professional (PMP)</h3><span>In progress</span></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="contact slide" id="contact" data-label="Contact">
+  <div class="bignum">09</div>
   <div class="wrap reveal">
-    <div class="eyebrow">06 · Contact</div>
+    <div class="eyebrow">09 · Contact</div>
     <h2>Have an exhibition, program or launch that needs to land?</h2>
-    <p>I am open to project and program management roles in Saudi Arabia, Egypt and the wider GCC, as well as project-based work.</p>
+    <p>Bring me the project that needs an owner. I will scope it, build the plan, run the vendors and stakeholders, and deliver it on time and on budget. Full-time role, contract or a single launch, based in Egypt and ready to relocate or travel wherever the work is.</p>
     <div class="cta">
       <a class="btn solid" href="mailto:marwanabdulgawad95@gmail.com">marwanabdulgawad95@gmail.com</a>
       <a class="btn ghost" href="https://www.linkedin.com/in/marwan-abdulgawad/" target="_blank" rel="noopener">LinkedIn ↗</a>
@@ -464,17 +566,29 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
   </div>
 </section>
 
+<div class="dots" role="navigation" aria-label="Section navigation"></div>
+
 <footer>
   <div class="wrap">
     <span>© <span id="y">2026</span> Marwan Abdulgawad</span>
-    <span>Jeddah, Saudi Arabia</span>
+    <span>Based in Egypt · Open to relocation</span>
   </div>
 </footer>
 
 <script>
 document.getElementById('y').textContent=new Date().getFullYear();
-const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll('.feature').forEach(f=>{const m=f.querySelector('.gallery .main');f.querySelectorAll('.th').forEach(t=>t.addEventListener('click',()=>{m.style.opacity=0;setTimeout(()=>{m.src=t.dataset.src;m.style.opacity=1},200);f.querySelectorAll('.th').forEach(x=>x.classList.toggle('on',x===t))}))});
+// stagger siblings
+document.querySelectorAll('.slide').forEach(sl=>{let i=0;sl.querySelectorAll('.reveal').forEach(el=>{el.style.transitionDelay=(Math.min(i++,4)*0.12)+'s'})});
+function countUp(root){root.querySelectorAll('b[data-n]').forEach(b=>{if(b.done)return;b.done=1;const n=+b.dataset.n,pre=b.dataset.pre||'',suf=b.dataset.suf||'';if(matchMedia('(prefers-reduced-motion:reduce)').matches)return;let t0;const st=t=>{t0=t0||t;const k=Math.min((t-t0)/1300,1);b.textContent=pre+Math.round(n*(1-Math.pow(1-k,3)))+suf;if(k<1)requestAnimationFrame(st)};requestAnimationFrame(st)})}
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');countUp(e.target);io.unobserve(e.target)}}),{threshold:.15});
 document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+// dots
+const slides=[...document.querySelectorAll('.slide')],dots=document.querySelector('.dots');
+dots.innerHTML=slides.map(sl=>`<a href="#${sl.id}" aria-label="${sl.dataset.label}"><span>${sl.dataset.label}</span><i></i></a>`).join('');
+const links=[...dots.querySelectorAll('a')];
+const so=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){links.forEach(l=>l.classList.toggle('on',l.getAttribute('href')==='#'+e.target.id))}}),{rootMargin:'-45% 0px -50% 0px'});
+slides.forEach(sl=>so.observe(sl));
 </script>
 </body>
 </html>
