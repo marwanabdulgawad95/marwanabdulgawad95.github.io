@@ -138,9 +138,12 @@ h2{font-family:var(--serif);font-weight:500;font-size:clamp(32px,4vw,46px);line-
 .skills{background:var(--surface);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
 .sk-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:40px}
 .sk-grid h4{font-size:13px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--accent-2);margin-bottom:16px}
-.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chips{display:flex;flex-wrap:wrap;gap:10px 8px}
 .chips span{background:var(--bg);border:1px solid var(--line);font-size:14px;padding:6px 13px;border-radius:999px}
 .chips span.x{border-color:var(--accent);color:var(--accent);font-weight:600}
+.chips span.h{background:var(--accent);border-color:var(--accent);color:var(--bg);font-weight:600}
+.legend .key{display:inline-block;width:12px;height:12px;border-radius:50%;border:1.5px solid var(--accent);vertical-align:-1px;margin-right:4px}
+.legend .key.h{background:var(--accent)}
 .legend{font-size:13px;color:var(--muted);margin-top:14px}
 .edu{margin-top:56px;padding-top:40px;border-top:1px solid var(--line);display:grid;grid-template-columns:260px 1fr;gap:48px}
 .edu h3{font-family:var(--serif);font-weight:500;font-size:24px;margin-bottom:4px}
@@ -521,10 +524,11 @@ footer{background:var(--accent-2);color:color-mix(in srgb,var(--bg) 75%,transpar
       <div>
         <h4>Software</h4>
         <div class="chips">
-          <span class="x">Excel</span><span class="x">Microsoft 365</span><span class="x">Google Workspace</span><span class="x">Outlook</span><span class="x">Slack</span><span class="x">Zoom</span><span class="x">ClickUp</span><span class="x">Notion</span><span class="x">Monday.com</span><span class="x">Miro</span><span class="x">Salesforce</span><span class="x">HubSpot</span><span class="x">Zoho CRM</span><span class="x">Zendesk</span><span class="x">SurveyMonkey</span><span class="x">ULTATEL HUB</span><span class="x">Microsoft Dynamics</span><span class="x">Pipe Drive</span>
-          <span><span>Close CRM</span><span>Mailchimp</span><span>Crunchbase</span><span>VICIdial</span><span>Photoshop</span><span>Premiere Pro</span><span>Python</span><span>VS Code</span>
+          <span class="h">HubSpot</span><span class="h">Microsoft Dynamics</span><span class="h">Pipedrive</span><span class="h">Close CRM</span><span class="h">Trello</span><span class="h">Slack</span>
+          <span class="x">Excel</span><span class="x">Microsoft 365</span><span class="x">Google Workspace</span><span class="x">Outlook</span><span class="x">Zoom</span><span class="x">ClickUp</span><span class="x">Notion</span><span class="x">Monday.com</span><span class="x">Miro</span><span class="x">Salesforce</span><span class="x">Zoho CRM</span><span class="x">Zendesk</span><span class="x">SurveyMonkey</span><span class="x">ULTATEL HUB</span>
+          <span>Mailchimp</span><span>Crunchbase</span><span>VICIdial</span><span>Photoshop</span><span>Premiere Pro</span><span>Python</span><span>VS Code</span>
         </div>
-        <div class="legend">Outlined = advanced level</div>
+        <div class="legend"><span class="key h"></span> Core tools &nbsp; <span class="key x"></span> Advanced</div>
       </div>
     </div>
     <div class="edu reveal">
