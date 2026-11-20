@@ -3,10 +3,10 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Marwan Abdulgawad | Project Manager, Arts, Culture & Events</title>
+<title>Marwan Abdulgawad | Project &amp; Program Manager</title>
 <meta name="description" content="Project manager with nine years of experience across arts and culture, SaaS, and startup ecosystems. Exhibitions at the Red Sea Museum, artist residencies, incubators, and client onboarding.">
 <meta property="og:title" content="Marwan Abdulgawad | Project Manager">
-<meta property="og:description" content="Exhibitions, residencies, programs and client delivery across KSA and Egypt.">
+<meta property="og:description" content="Project and program delivery across arts and culture, SaaS, telecom and startup ecosystems.">
 <meta property="og:image" content="og.jpg">
 <meta property="og:type" content="website">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23143a3f'/%3E%3Ctext x='32' y='42' font-family='Georgia,serif' font-size='28' fill='%23f3ece0' text-anchor='middle'%3EMA%3C/text%3E%3C/svg%3E">
@@ -181,17 +181,28 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
 .card .pic.logo{display:flex;align-items:center;justify-content:center;padding:28px}
 .card .pic.logo img{object-fit:contain}
 
+
 /* certifications */
-.cert-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-.cert{display:flex;gap:16px;align-items:flex-start;border:1px solid var(--line);border-radius:8px;padding:24px;background:var(--surface)}
-.cert .ic{flex-shrink:0;width:38px;height:38px;border-radius:50%;background:var(--accent);color:var(--bg);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:17px}
-.cert h3{font-family:var(--serif);font-weight:500;font-size:20px;line-height:1.25;margin-bottom:6px}
-.cert span{font-size:13px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
-.cert.prog{border-style:dashed;border-color:var(--accent-2)}
-.cert.prog .ic{background:var(--accent-2)}
-.cert.prog span{color:var(--accent-2)}
+.cert-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.cert{display:flex;flex-direction:column;text-align:left;font:inherit;color:inherit;border:1px solid var(--line);border-radius:10px;overflow:hidden;background:var(--surface);padding:0;cursor:pointer;transition:transform .2s,border-color .2s,box-shadow .2s}
+button.cert:hover{transform:translateY(-3px);border-color:var(--accent);box-shadow:0 14px 30px -18px rgba(0,0,0,.35)}
+.cert .shot{position:relative;display:block;aspect-ratio:1100/671;background:#fff;border-bottom:1px solid var(--line);overflow:hidden}
+.cert .shot img{width:100%;height:100%;object-fit:cover}
+.cert .zoom{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(20,58,63,.72);color:#fff;font-size:14px;font-weight:700;opacity:0;transition:opacity .2s}
+button.cert:hover .zoom,button.cert:focus-visible .zoom{opacity:1}
+.cert .meta{display:block;padding:18px 20px 20px}
+.cert .t{display:block;font-family:var(--serif);font-weight:500;font-size:19px;line-height:1.25;margin-bottom:6px}
+.cert .sub{display:block;font-size:13px;color:var(--muted)}
+.cert.prog{cursor:default;border:1.5px dashed var(--accent-2)}
+.cert .shot.pmp{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;background:color-mix(in srgb,var(--accent-2) 8%,var(--surface))}
+.cert .ring{width:92px;height:92px;border-radius:50%;border:3px solid var(--accent-2);border-right-color:color-mix(in srgb,var(--accent-2) 25%,transparent);display:flex;align-items:center;justify-content:center;font-family:var(--serif);font-size:24px;color:var(--accent-2)}
+.cert .st{font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--accent-2)}
 @media (max-width:900px){.cert-grid{grid-template-columns:1fr 1fr}}
 @media (max-width:560px){.cert-grid{grid-template-columns:1fr}}
+.lightbox{position:fixed;inset:0;z-index:50;background:rgba(10,14,15,.86);display:none;align-items:center;justify-content:center;padding:24px;cursor:zoom-out}
+.lightbox.on{display:flex}
+.lightbox img{max-width:min(1100px,100%);max-height:88vh;border-radius:6px;box-shadow:0 20px 60px rgba(0,0,0,.5)}
+.lightbox button{position:absolute;top:18px;right:22px;background:none;border:none;color:#fff;font-size:34px;line-height:1;cursor:pointer}
 
 /* ===== presentation mode ===== */
 html{scroll-snap-type:y proximity;scroll-padding-top:64px}
@@ -256,8 +267,8 @@ footer{background:var(--accent-2);color:color-mix(in srgb,var(--bg) 75%,transpar
   <div class="bignum">01</div>
   <div class="wrap">
     <div>
-      <div class="eyebrow reveal">Project Manager · Arts, Culture &amp; Events</div>
-      <h1 class="wipe">Exhibitions, programs and launches, <em>delivered on time.</em></h1>
+      <div class="eyebrow reveal">Project &amp; Program Manager · Culture, SaaS, Telecom &amp; Startups</div>
+      <h1 class="wipe">Projects, programs and launches, <em>delivered on time.</em></h1>
       <p class="lede reveal">I plan and deliver projects end to end, from scope and vendors to launch day and close-out, across arts and culture, SaaS and startup programs. Most recently: Sunken Treasures temporary exhibitions at the Red Sea Museum in Jeddah under the Ministry of Culture and Museums Commission.</p>
       <div class="cta reveal">
         <a class="btn solid" href="#work">See selected work</a>
@@ -547,12 +558,50 @@ footer{background:var(--accent-2);color:color-mix(in srgb,var(--bg) 75%,transpar
   <div class="wrap">
     <div class="sec-head reveal"><div class="num">08 · Certifications</div><h2>Always sharpening the craft</h2></div>
     <div class="cert-grid">
-      <div class="cert reveal"><div class="ic">✓</div><div><h3>Excel for Project Management</h3><span>Certified</span></div></div>
-      <div class="cert reveal"><div class="ic">✓</div><div><h3>Project Management Foundations</h3><span>Certified</span></div></div>
-      <div class="cert reveal"><div class="ic">✓</div><div><h3>Project Management Foundations: Budgets</h3><span>Certified</span></div></div>
-      <div class="cert reveal"><div class="ic">✓</div><div><h3>Strategic Project Risk Management</h3><span>Certified</span></div></div>
-      <div class="cert reveal"><div class="ic">✓</div><div><h3>Leading without Formal Authority</h3><span>Certified</span></div></div>
-      <div class="cert reveal prog"><div class="ic">…</div><div><h3>Project Management Professional (PMP)</h3><span>In progress</span></div></div>
+      <button type="button" class="cert reveal" data-full="cert-google-agile.jpg" aria-label="View Agile Project Management certificate">
+        <span class="shot"><img src="cert-google-agile.jpg" alt="Agile Project Management certificate" loading="lazy"><span class="zoom">View certificate ↗</span></span>
+        <span class="meta"><span class="t">Agile Project Management</span><span class="sub">Google · Coursera · Nov 2026 · about 19 hours</span></span>
+      </button>
+      <button type="button" class="cert reveal" data-full="cert-agile.jpg" aria-label="View Agile Foundations certificate">
+        <span class="shot"><img src="cert-agile.jpg" alt="Agile Foundations certificate" loading="lazy"><span class="zoom">View certificate ↗</span></span>
+        <span class="meta"><span class="t">Agile Foundations</span><span class="sub">LinkedIn Learning · Nov 2026 · 1.50 PDUs</span></span>
+      </button>
+      <button type="button" class="cert reveal" data-full="cert-pm-foundations.jpg" aria-label="View Project Management Foundations certificate">
+        <span class="shot"><img src="cert-pm-foundations.jpg" alt="Project Management Foundations certificate" loading="lazy"><span class="zoom">View certificate ↗</span></span>
+        <span class="meta"><span class="t">Project Management Foundations</span><span class="sub">LinkedIn Learning · Aug 2026 · 3.25 PDUs</span></span>
+      </button>
+      <button type="button" class="cert reveal" data-full="cert-small-projects.jpg" aria-label="View Project Management Foundations: Small Projects certificate">
+        <span class="shot"><img src="cert-small-projects.jpg" alt="Project Management Foundations: Small Projects certificate" loading="lazy"><span class="zoom">View certificate ↗</span></span>
+        <span class="meta"><span class="t">Project Management Foundations: Small Projects</span><span class="sub">LinkedIn Learning · Nov 2026 · 1.50 PDUs</span></span>
+      </button>
+      <button type="button" class="cert reveal" data-full="cert-pm-budgets.jpg" aria-label="View Project Management Foundations: Budgets certificate">
+        <span class="shot"><img src="cert-pm-budgets.jpg" alt="Project Management Foundations: Budgets certificate" loading="lazy"><span class="zoom">View certificate ↗</span></span>
+        <span class="meta"><span class="t">Project Management Foundations: Budgets</span><span class="sub">LinkedIn Learning · Oct 2026 · 0.75 PDUs</span></span>
+      </button>
+      <button type="button" class="cert reveal" data-full="cert-risk.jpg" aria-label="View Strategic Project Risk Management certificate">
+        <span class="shot"><img src="cert-risk.jpg" alt="Strategic Project Risk Management certificate" loading="lazy"><span class="zoom">View certificate ↗</span></span>
+        <span class="meta"><span class="t">Strategic Project Risk Management</span><span class="sub">LinkedIn Learning · Oct 2026 · 1.50 PDUs</span></span>
+      </button>
+      <button type="button" class="cert reveal" data-full="cert-gantt.jpg" aria-label="View Learning Gantt Charts certificate">
+        <span class="shot"><img src="cert-gantt.jpg" alt="Learning Gantt Charts certificate" loading="lazy"><span class="zoom">View certificate ↗</span></span>
+        <span class="meta"><span class="t">Learning Gantt Charts</span><span class="sub">LinkedIn Learning · Nov 2026 · 1.25 PDUs</span></span>
+      </button>
+      <button type="button" class="cert reveal" data-full="cert-excel.jpg" aria-label="View Excel for Project Management certificate">
+        <span class="shot"><img src="cert-excel.jpg" alt="Excel for Project Management certificate" loading="lazy"><span class="zoom">View certificate ↗</span></span>
+        <span class="meta"><span class="t">Excel for Project Management</span><span class="sub">LinkedIn Learning · Oct 2026 · 1.50 PDUs</span></span>
+      </button>
+      <button type="button" class="cert reveal" data-full="cert-leading.jpg" aria-label="View Leading without Formal Authority certificate">
+        <span class="shot"><img src="cert-leading.jpg" alt="Leading without Formal Authority certificate" loading="lazy"><span class="zoom">View certificate ↗</span></span>
+        <span class="meta"><span class="t">Leading without Formal Authority</span><span class="sub">LinkedIn Learning · Oct 2026 · 1.00 PDUs</span></span>
+      </button>
+      <button type="button" class="cert reveal" data-full="cert-communication.jpg" aria-label="View The Three Pillars of Effective Communication certificate">
+        <span class="shot"><img src="cert-communication.jpg" alt="The Three Pillars of Effective Communication certificate" loading="lazy"><span class="zoom">View certificate ↗</span></span>
+        <span class="meta"><span class="t">The Three Pillars of Effective Communication</span><span class="sub">LinkedIn Learning · Nov 2026 · 0.25 PDUs</span></span>
+      </button>
+      <div class="cert prog reveal">
+        <span class="shot pmp"><span class="ring">PMP</span><span class="st">In progress</span></span>
+        <span class="meta"><span class="t">Project Management Professional (PMP)</span><span class="sub">PMI · 12.5 of the 35 required contact hours completed</span></span>
+      </div>
     </div>
   </div>
 </section>
@@ -561,7 +610,7 @@ footer{background:var(--accent-2);color:color-mix(in srgb,var(--bg) 75%,transpar
   <div class="bignum">09</div>
   <div class="wrap reveal">
     <div class="eyebrow">09 · Contact</div>
-    <h2>Have an exhibition, program or launch that needs to land?</h2>
+    <h2>Have a project, program or launch that needs to land?</h2>
     <p>Bring me the project that needs an owner. I will scope it, build the plan, run the vendors and stakeholders, and deliver it on time and on budget. Full-time role, contract or a single launch, based in Egypt and ready to relocate or travel wherever the work is.</p>
     <div class="cta">
       <a class="btn solid" href="mailto:marwanabdulgawad95@gmail.com">marwanabdulgawad95@gmail.com</a>
@@ -570,6 +619,7 @@ footer{background:var(--accent-2);color:color-mix(in srgb,var(--bg) 75%,transpar
   </div>
 </section>
 
+<div class="lightbox" id="lb" role="dialog" aria-modal="true" aria-label="Certificate"><button type="button" aria-label="Close">×</button><img alt=""></div>
 <div class="dots" role="navigation" aria-label="Section navigation"></div>
 
 <footer>
@@ -581,6 +631,9 @@ footer{background:var(--accent-2);color:color-mix(in srgb,var(--bg) 75%,transpar
 
 <script>
 document.getElementById('y').textContent=new Date().getFullYear();
+const lb=document.getElementById('lb'),lbi=lb.querySelector('img');
+document.querySelectorAll('button.cert').forEach(c=>c.addEventListener('click',()=>{lbi.src=c.dataset.full;lbi.alt=c.querySelector('img').alt;lb.classList.add('on')}));
+lb.addEventListener('click',()=>lb.classList.remove('on'));document.addEventListener('keydown',e=>{if(e.key==='Escape')lb.classList.remove('on')});
 document.querySelectorAll('.feature').forEach(f=>{const m=f.querySelector('.gallery .main');f.querySelectorAll('.th').forEach(t=>t.addEventListener('click',()=>{m.style.opacity=0;setTimeout(()=>{m.src=t.dataset.src;m.style.opacity=1},200);f.querySelectorAll('.th').forEach(x=>x.classList.toggle('on',x===t))}))});
 // stagger siblings
 document.querySelectorAll('.slide').forEach(sl=>{let i=0;sl.querySelectorAll('.reveal').forEach(el=>{el.style.transitionDelay=(Math.min(i++,4)*0.12)+'s'})});
