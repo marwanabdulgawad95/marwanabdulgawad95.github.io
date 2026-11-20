@@ -647,5 +647,30 @@ const links=[...dots.querySelectorAll('a')];
 const so=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){links.forEach(l=>l.classList.toggle('on',l.getAttribute('href')==='#'+e.target.id))}}),{rootMargin:'-45% 0px -50% 0px'});
 slides.forEach(sl=>so.observe(sl));
 </script>
+
+<script>
+/* Visit alerts via ntfy.sh: one push per visitor session; skips bots and the owner's own browser (open the site once with ?me=1 to mark it). */
+(function(){
+  try{
+    var q=new URLSearchParams(location.search);
+    if(q.get('me')==='1'){localStorage.setItem('pf-owner','1');}
+    if(localStorage.getItem('pf-owner')==='1')return;
+    if(navigator.webdriver||/bot|crawl|spider|slurp|headless|lighthouse|facebookexternalhit|linkedinbot/i.test(navigator.userAgent))return;
+    if(sessionStorage.getItem('pf-pinged'))return;
+    sessionStorage.setItem('pf-pinged','1');
+    var src=q.get('src')||q.get('utm_source')||'';
+    var ref='direct';try{if(document.referrer){ref=new URL(document.referrer).hostname.replace(/^www\./,'')}}catch(e){}
+    var tz='';try{tz=Intl.DateTimeFormat().resolvedOptions().timeZone||''}catch(e){}
+    var place=tz.split('/').pop().replace(/_/g,' ');
+    var dev=/Mobi|Android|iPhone/i.test(navigator.userAgent)?'phone':(/iPad|Tablet/i.test(navigator.userAgent)?'tablet':'computer');
+    var lines=[];
+    if(src)lines.push('Link tag: '+src);
+    lines.push('Came from: '+ref);
+    if(place)lines.push('Time zone: '+place);
+    lines.push('Device: '+dev+(navigator.language?' ('+navigator.language+')':''));
+    fetch('https://ntfy.sh/marwan-pf-12d1b55d80ac',{method:'POST',keepalive:true,body:lines.join('\n'),headers:{'Title':src?('Portfolio visit: '+src):'Portfolio visit','Tags':'eyes','Click':location.origin}}).catch(function(){});
+  }catch(e){}
+})();
+</script>
 </body>
 </html>
